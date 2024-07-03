@@ -1,5 +1,6 @@
 import React from 'react';
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import Generating from './Generating';
 
 export const ChildLogin = ({ isOpen, setIsOpen }) => {
 	return (
@@ -16,24 +17,38 @@ export const ChildLogin = ({ isOpen, setIsOpen }) => {
 					</DialogTitle>
 					<div className='mt-4'>
 						<p className='mb-2'>
-							An account has been set up for Annisa who is 14 years old with
-							ADHD and Autism Spectrum Disorder. Annisa prefers visual aids for
-							learning.
+							An account has been set up for <strong>Annisa</strong>, who is 14
+							years old with ADHD and Autism Spectrum Disorder. Annisa prefers
+							visual aids for learning.
 						</p>
+						<Generating />
 						<p className='mt-4'>
-							Brainwave will adjust its learning style to accommodate the
-							specified learning needs and disabilities.
+							<em>
+								Brainwave will adjust its learning style to accommodate her
+								specified learning needs.
+							</em>
+							<br></br>
+							<br></br>
+							Please use the details below to log into Annisa's account.
 						</p>
 					</div>
-					<div className='mt-4'>
-						<p className='mb-2'>Email: annisanye2010@gmail.com</p>
-						<p>Password: Annisa06022010</p>
+					<div className='mt-4 bg-white text-n-8 rounded px-2 py-2'>
+						<p>
+							<strong>Email:</strong> annisa2010@gmail.com
+						</p>
+						<p>
+							<strong>Password:</strong> Annisa06022010
+						</p>
+					</div>
+					<br></br>
+					<div>
+						<p>Happy learning!</p>
 					</div>
 					<div className='mt-6 flex justify-end space-x-4'>
 						<button
 							type='button'
 							onClick={() => setIsOpen(false)}
-							className='px-4 py-2 bg-gray-200 rounded-lg'
+							className='small-newtask-btn'
 						>
 							Close
 						</button>
