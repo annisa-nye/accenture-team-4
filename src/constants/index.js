@@ -211,7 +211,7 @@ export const pricing = [
 	{
 		id: '0',
 		title: 'Front-End',
-		description: 'User-friendly interface optimized for various devices',
+		description: 'User-friendly interface optimized for various devices.',
 		price: 'React',
 		features: [
 			'Responsive design',
@@ -223,7 +223,7 @@ export const pricing = [
 		id: '1',
 		title: 'Back-End',
 		description:
-			'Robust server infrastructure to handle data processing, storage, and API requests',
+			'Robust server infrastructure to handle data processing, storage, and API requests.',
 		price: 'Express.js, MongoDB',
 		features: [
 			'RESTful API',
@@ -235,7 +235,7 @@ export const pricing = [
 		id: '2',
 		title: 'AI Engine',
 		description:
-			'Machine learning algorithms for personalization and adaptation of learning content',
+			'Machine learning algorithms for personalization and adaptation of learning content.',
 		price: 'TensorFlow, Python',
 		features: [
 			'Personalized learning paths',
@@ -245,14 +245,14 @@ export const pricing = [
 	},
 	{
 		id: '3',
-		title: 'Data Analytics',
+		title: 'Security Layer',
 		description:
-			'Robust security measures ensuring data privacy and protection of sensitive user information',
-		price: 'Apache Spark, Tableau',
+			'Robust security measures ensuring data privacy and protection of sensitive user information.',
+		price: 'OAuth 2.0, SSL/TLS',
 		features: [
-			'Real-time analytics',
-			'Predictive modeling',
-			'Customizable dashboards',
+			'End-to-end encryption',
+			'Secure data storage',
+			'Regular security audits',
 		],
 	},
 ];
