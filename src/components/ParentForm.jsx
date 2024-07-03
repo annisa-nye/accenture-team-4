@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import Button from './Button';
+import { ChildLogin } from './ChildLogin';
 
 export const ParentForm = ({ isOpen, setIsOpen }) => {
 	const [name, setName] = useState('');
@@ -13,6 +14,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 	const [dialogStyle, setDialogStyle] = useState(
 		getDialogStyle(window.innerWidth)
 	);
+	const [isChildLoginOpen, setIsChildLoginOpen] = useState(false);
 
 	const validate = () => {
 		const newErrors = {};
@@ -50,6 +52,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 		setEmail('');
 		setErrors({});
 		setIsOpen(false); // Close the dialog
+		setIsChildLoginOpen(true); // Open the Child Login dialog
 	};
 
 	const handleCheckboxChange = (e) => {
@@ -117,147 +120,146 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 	}
 
 	return (
-		<Dialog
-			open={isOpen}
-			onClose={() => setIsOpen(false)}
-			className='relative z-50'
-		>
-			<div style={dialogStyle}>
-				<DialogPanel className='relative block p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]'>
-					<div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] bg-n-8 rounded-lg shadow-lg'>
-						<DialogTitle className='font-bold text-xl mb-5'>
-							<h2>Set Up Your Child’s Account</h2>
-						</DialogTitle>
-						<form className='space-y-4' onSubmit={handleSubmit}>
-							<div>
-								<input
-									type='text'
-									placeholder='Child’s Name'
-									value={name}
-									onChange={(e) => setName(e.target.value)}
-									className='w-full p-2 border rounded'
-								/>
-								{errors.name && (
-									<p className='error text-red-500'>{errors.name}</p>
-								)}
-							</div>
-							<div>
-								<input
-									type='date'
-									placeholder='Date of Birth'
-									value={dob}
-									onChange={(e) => setDob(e.target.value)}
-									className='w-full p-2 border rounded'
-								/>
-								{errors.dob && (
-									<p className='error text-red-500'>{errors.dob}</p>
-								)}
-							</div>
-							<div>
-								<select
-									value={sex}
-									onChange={(e) => setSex(e.target.value)}
-									className='w-full p-2 border rounded'
-								>
-									<option value=''>Select Sex</option>
-									<option value='male'>Male</option>
-									<option value='female'>Female</option>
-									<option value='other'>Other</option>
-								</select>
-								{errors.sex && (
-									<p className='error text-red-500'>{errors.sex}</p>
-								)}
-							</div>
-							<div>
-								<div className='flex flex-col'>
-									<label>
-										<input
-											type='checkbox'
-											value='ADHD'
-											checked={disabilities.includes('ADHD')}
-											onChange={handleCheckboxChange}
-											className='mr-2'
-										/>
-										ADHD
-									</label>
-									<label>
-										<input
-											type='checkbox'
-											value='Autism Spectrum Disorder'
-											checked={disabilities.includes(
-												'Autism Spectrum Disorder'
-											)}
-											onChange={handleCheckboxChange}
-											className='mr-2'
-										/>
-										Autism Spectrum Disorder
-									</label>
-									<label>
-										<input
-											type='checkbox'
-											value='Cerebral Palsy'
-											checked={disabilities.includes('Cerebral Palsy')}
-											onChange={handleCheckboxChange}
-											className='mr-2'
-										/>
-										Cerebral Palsy
-									</label>
-									<label>
-										<input
-											type='checkbox'
-											value='Down Syndrome'
-											checked={disabilities.includes('Down Syndrome')}
-											onChange={handleCheckboxChange}
-											className='mr-2'
-										/>
-										Down Syndrome
-									</label>
+		<>
+			<Dialog
+				open={isOpen}
+				onClose={() => setIsOpen(false)}
+				className='relative z-50'
+			>
+				<div style={dialogStyle}>
+					<DialogPanel className='relative block p-0.5 bg-no-repeat bg-[length:100%_100%] w-full max-w-md'>
+						<div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] bg-n-8 rounded-lg shadow-lg'>
+							<DialogTitle className='font-bold text-xl mb-5'>
+								<h2>Set Up Your Child’s Account</h2>
+							</DialogTitle>
+							<form className='space-y-4' onSubmit={handleSubmit}>
+								<div>
+									<input
+										type='text'
+										placeholder='Child’s Name'
+										value={name}
+										onChange={(e) => setName(e.target.value)}
+										className='w-full p-2 border rounded'
+									/>
+									{errors.name && (
+										<p className='error text-red-500'>{errors.name}</p>
+									)}
 								</div>
-								{errors.disabilities && (
-									<p className='error text-red-500'>{errors.disabilities}</p>
-								)}
-							</div>
-							<div>
-								<textarea
-									placeholder='Learning Needs Description'
-									value={learningNeeds}
-									onChange={(e) => setLearningNeeds(e.target.value)}
-									className='w-full p-2 border rounded'
-								/>
-								{errors.learningNeeds && (
-									<p className='error text-red-500'>{errors.learningNeeds}</p>
-								)}
-							</div>
-							<div>
-								<input
-									type='email'
-									placeholder="Child's Email"
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-									className='w-full p-2 border rounded'
-								/>
-								{errors.email && (
-									<p className='error text-red-500'>{errors.email}</p>
-								)}
-							</div>
-							<div className='flex justify-end space-x-4'>
-								<button
-									type='button'
-									onClick={() => setIsOpen(false)}
-									className='small-newtask-btn'
-								>
-									Cancel
-								</button>
-								<Button
-									type='submit'
-								>
-									Submit
-								</Button>
-							</div>
-						</form>
-					</div>
-				</DialogPanel>
-			</div>
-		</Dialog>
+								<div>
+									<input
+										type='date'
+										placeholder='Date of Birth'
+										value={dob}
+										onChange={(e) => setDob(e.target.value)}
+										className='w-full p-2 border rounded'
+									/>
+									{errors.dob && (
+										<p className='error text-red-500'>{errors.dob}</p>
+									)}
+								</div>
+								<div>
+									<select
+										value={sex}
+										onChange={(e) => setSex(e.target.value)}
+										className='w-full p-2 border rounded'
+									>
+										<option value=''>Select Sex</option>
+										<option value='male'>Male</option>
+										<option value='female'>Female</option>
+										<option value='other'>Other</option>
+									</select>
+									{errors.sex && (
+										<p className='error text-red-500'>{errors.sex}</p>
+									)}
+								</div>
+								<div>
+									<div className='flex flex-col'>
+										<label>
+											<input
+												type='checkbox'
+												value='ADHD'
+												checked={disabilities.includes('ADHD')}
+												onChange={handleCheckboxChange}
+												className='mr-2'
+											/>
+											ADHD
+										</label>
+										<label>
+											<input
+												type='checkbox'
+												value='Autism Spectrum Disorder'
+												checked={disabilities.includes(
+													'Autism Spectrum Disorder'
+												)}
+												onChange={handleCheckboxChange}
+												className='mr-2'
+											/>
+											Autism Spectrum Disorder
+										</label>
+										<label>
+											<input
+												type='checkbox'
+												value='Cerebral Palsy'
+												checked={disabilities.includes('Cerebral Palsy')}
+												onChange={handleCheckboxChange}
+												className='mr-2'
+											/>
+											Cerebral Palsy
+										</label>
+										<label>
+											<input
+												type='checkbox'
+												value='Down Syndrome'
+												checked={disabilities.includes('Down Syndrome')}
+												onChange={handleCheckboxChange}
+												className='mr-2'
+											/>
+											Down Syndrome
+										</label>
+									</div>
+									{errors.disabilities && (
+										<p className='error text-red-500'>{errors.disabilities}</p>
+									)}
+								</div>
+								<div>
+									<textarea
+										placeholder='Learning Needs Description'
+										value={learningNeeds}
+										onChange={(e) => setLearningNeeds(e.target.value)}
+										className='w-full p-2 border rounded'
+									/>
+									{errors.learningNeeds && (
+										<p className='error text-red-500'>{errors.learningNeeds}</p>
+									)}
+								</div>
+								<div>
+									<input
+										type='email'
+										placeholder="Child's Email"
+										value={email}
+										onChange={(e) => setEmail(e.target.value)}
+										className='w-full p-2 border rounded'
+									/>
+									{errors.email && (
+										<p className='error text-red-500'>{errors.email}</p>
+									)}
+								</div>
+								<div className='flex justify-end space-x-4'>
+									<button
+										type='button'
+										onClick={() => setIsOpen(false)}
+										className='small-newtask-btn'
+									>
+										Cancel
+									</button>
+									<Button type='submit'>Submit</Button>
+								</div>
+							</form>
+						</div>
+					</DialogPanel>
+				</div>
+			</Dialog>
+			<ChildLogin isOpen={isChildLoginOpen} setIsOpen={setIsChildLoginOpen} />
+		</>
 	);
 };
