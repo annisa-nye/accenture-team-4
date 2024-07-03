@@ -244,16 +244,16 @@ export const pricing = [
 export const benefits = [
 	{
 		id: '0',
-		title: 'Processing information',
-		text: 'They may find it difficult to understand and retain complex or multiple instructions, leading to slower learning and frustration.',
+		title: 'Task Simplification',
+		text: 'Complex learning tasks are broken down into manageable steps, making education more accessible and less intimidating for students with disabilities.',
 		backgroundUrl: './src/assets/benefits/card-1.svg',
 		iconUrl: benefitIcon1,
 		imageUrl: benefitImage2,
 	},
 	{
 		id: '1',
-		title: 'Communication barriers',
-		text: 'These students might have challenges in expressing themselves clearly and understanding others, which can hinder effective learning and social interaction.',
+		title: 'Cutting-Edge Technology',
+		text: "By leveraging the latest AI research and big data analytics, we create dynamic learning experiences that evolve with each student's progress.",
 		backgroundUrl: './src/assets/benefits/card-2.svg',
 		iconUrl: benefitIcon2,
 		imageUrl: benefitImage2,
@@ -261,8 +261,8 @@ export const benefits = [
 	},
 	{
 		id: '2',
-		title: 'Lack of Motivation',
-		text: 'Due to repeated difficulties and setbacks, they may experience low self-esteem and reduced motivation to engage in learning activities.',
+		title: 'Personalized AI-Powered Support',
+		text: 'Our app harnesses AI to deliver personalized education for students with Autism, Down Syndrome, Cerebral Palsy, and ADHD, ensuring each child receives tailored, effective support that adapts to their unique abilities.',
 		backgroundUrl: './src/assets/benefits/card-3.svg',
 		iconUrl: benefitIcon3,
 		imageUrl: benefitImage2,
