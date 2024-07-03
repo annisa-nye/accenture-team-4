@@ -210,33 +210,49 @@ export const collabApps = [
 export const pricing = [
 	{
 		id: '0',
-		title: 'Design',
-		description: 'Figma',
-		price: '2 days',
+		title: 'Front-End',
+		description: 'User-friendly interface optimized for various devices',
+		price: 'React',
 		features: [
-			'Create wireframes',
-			'UI/UX designs',
-			'Prototyping',
+			'Responsive design',
+			'Intuitive navigation',
+			'Accessibility compliance',
 		],
 	},
 	{
 		id: '1',
-		title: 'Development',
-		description: 'HTML, CSS, Javascript, React, Firebase, OpenAI API',
-		price: '3 days',
+		title: 'Back-End',
+		description:
+			'Robust server infrastructure to handle data processing, storage, and API requests',
+		price: 'Express.js, MongoDB',
 		features: [
-			'Implement front-end and back-end functionality',
-			'Integrate OpenAI API for chatbot functionality',
-			'Integrate Firebase for user authentication and data storage',
+			'RESTful API',
+			'Scalable architecture',
+			'Efficient data management',
 		],
 	},
 	{
 		id: '2',
-		title: 'Deployment',
-		description: 'Amazon Web Services',
-		price: '5 days',
+		title: 'AI Engine',
+		description:
+			'Machine learning algorithms for personalization and adaptation of learning content',
+		price: 'TensorFlow, Python',
 		features: [
-			'Deploy the application to a cloud platform',
+			'Personalized learning paths',
+			'Content recommendation',
+			'Adaptive difficulty',
+		],
+	},
+	{
+		id: '3',
+		title: 'Data Analytics',
+		description:
+			'Robust security measures ensuring data privacy and protection of sensitive user information',
+		price: 'Apache Spark, Tableau',
+		features: [
+			'Real-time analytics',
+			'Predictive modeling',
+			'Customizable dashboards',
 		],
 	},
 ];
