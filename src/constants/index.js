@@ -39,23 +39,23 @@ import {
 export const navigation = [
 	{
 		id: '0',
-		title: 'Features',
+		title: 'Solution',
 		url: '#features',
 	},
 	{
 		id: '1',
-		title: 'Pricing',
-		url: '#pricing',
+		title: 'Features',
+		url: '#core-features',
 	},
 	{
 		id: '2',
-		title: 'How to use',
-		url: '#how-to-use',
+		title: 'Architecture',
+		url: '#architecture',
 	},
 	{
 		id: '3',
-		title: 'Roadmap',
-		url: '#roadmap',
+		title: 'Future imporvements',
+		url: '#future-improvements',
 	},
 	{
 		id: '4',
