@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import Button from './Button';
 
 export const ParentForm = ({ isOpen, setIsOpen }) => {
 	const [name, setName] = useState('');
-	const [age, setAge] = useState('');
+	const [dob, setDob] = useState('');
 	const [sex, setSex] = useState('');
 	const [disabilities, setDisabilities] = useState([]);
 	const [learningNeeds, setLearningNeeds] = useState('');
@@ -16,7 +17,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 	const validate = () => {
 		const newErrors = {};
 		if (!name.trim()) newErrors.name = 'Child’s name is required';
-		if (!age.trim()) newErrors.age = 'Age is required';
+		if (!dob.trim()) newErrors.dob = 'Date of birth is required';
 		if (!sex.trim()) newErrors.sex = 'Sex is required';
 		if (disabilities.length === 0)
 			newErrors.disabilities = 'At least one disability must be selected';
@@ -34,7 +35,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 		// Handle form submission logic here, e.g., send data to API
 		console.log({
 			name,
-			age,
+			dob,
 			sex,
 			disabilities,
 			learningNeeds,
@@ -42,7 +43,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 		});
 
 		setName('');
-		setAge('');
+		setDob('');
 		setSex('');
 		setDisabilities([]);
 		setLearningNeeds('');
@@ -71,7 +72,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 	function getDialogStyle(width) {
 		if (width <= 576) {
 			return {
-				backgroundColor: 'white',
+				backgroundColor: 'n-8',
 				position: 'fixed',
 				top: '5%',
 				left: '2.5%',
@@ -85,7 +86,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 			};
 		} else if (width <= 768) {
 			return {
-				backgroundColor: 'white',
+				backgroundColor: 'n-8',
 				position: 'fixed',
 				top: '10%',
 				left: '10%',
@@ -99,7 +100,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 			};
 		} else {
 			return {
-				backgroundColor: 'white',
+				backgroundColor: 'n-8',
 				position: 'fixed',
 				top: '50%',
 				left: '50%',
@@ -125,7 +126,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 				<DialogPanel className='relative block p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]'>
 					<div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] bg-n-8 rounded-lg shadow-lg'>
 						<DialogTitle className='font-bold text-xl mb-5'>
-							<h2>Set Up Child’s Account</h2>
+							<h2>Set Up Your Child’s Account</h2>
 						</DialogTitle>
 						<form className='space-y-4' onSubmit={handleSubmit}>
 							<div>
@@ -142,14 +143,14 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 							</div>
 							<div>
 								<input
-									type='number'
-									placeholder='Age'
-									value={age}
-									onChange={(e) => setAge(e.target.value)}
+									type='date'
+									placeholder='Date of Birth'
+									value={dob}
+									onChange={(e) => setDob(e.target.value)}
 									className='w-full p-2 border rounded'
 								/>
-								{errors.age && (
-									<p className='error text-red-500'>{errors.age}</p>
+								{errors.dob && (
+									<p className='error text-red-500'>{errors.dob}</p>
 								)}
 							</div>
 							<div>
@@ -230,7 +231,7 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 							<div>
 								<input
 									type='email'
-									placeholder='Parent’s Email'
+									placeholder="Child's Email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
 									className='w-full p-2 border rounded'
@@ -243,16 +244,15 @@ export const ParentForm = ({ isOpen, setIsOpen }) => {
 								<button
 									type='button'
 									onClick={() => setIsOpen(false)}
-									className='px-4 py-2 bg-gray-200 rounded-lg'
+									className='small-newtask-btn'
 								>
 									Cancel
 								</button>
-								<button
+								<Button
 									type='submit'
-									className='px-4 py-2 bg-blue-500 text-white rounded-lg'
 								>
 									Submit
-								</button>
+								</Button>
 							</div>
 						</form>
 					</div>

@@ -33,7 +33,7 @@ const LoginDialog = ({ isOpen, setIsOpen, onLoginSuccess }) => {
 			<div className='fixed inset-0 flex items-center justify-center p-4'>
 				<DialogPanel className='w-full max-w-md p-6 bg-n-8 rounded-lg shadow-lg'>
 					<DialogTitle className='font-bold text-xl'>
-						<h2>Parent Log In</h2>
+						<h2>Parent Sign In</h2>
 					</DialogTitle>
 					<br />
 					<form className='space-y-4' onSubmit={handleSubmit}>
@@ -71,8 +71,8 @@ const LoginDialog = ({ isOpen, setIsOpen, onLoginSuccess }) => {
 							>
 								Cancel
 							</button>
-							<Button type='submit' className='small-newtask-btn'>
-								Log In
+							<Button type='submit'>
+								Sign In
 							</Button>
 						</div>
 					</form>
