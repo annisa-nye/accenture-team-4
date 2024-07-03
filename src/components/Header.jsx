@@ -7,11 +7,14 @@ import MenuSvg from '../assets/svg/MenuSvg';
 import { HamburgerMenu } from './design/Header';
 import { useState } from 'react';
 import { ParentForm } from './ParentForm'; // Import ParentForm
+import LoginDialog from './LoginDialog';
 
 const Header = () => {
 	const pathname = useLocation();
 	const [openNavigation, setOpenNavigation] = useState(false);
 	const [isDialogOpen, setIsDialogOpen] = useState(false); // State to manage dialog visibility
+	const [isSignedIn, setIsSignedIn] = useState(false); // State to manage dialog visibility
+	const [isFormFilled, setIsFormFilled] = useState(false); // State to manage form visibility
 
 	const toggleNavigation = () => {
 		if (openNavigation) {
@@ -68,14 +71,11 @@ const Header = () => {
 					<HamburgerMenu />
 				</nav>
 
-				<button
+				<Button
 					onClick={() => setIsDialogOpen(true)} // Open the dialog on button click
 					className='button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block'
 				>
-					New account
-				</button>
-				<Button className='hidden lg:flex' href='#login'>
-					Sign in
+					Sign In
 				</Button>
 
 				<Button
@@ -87,8 +87,17 @@ const Header = () => {
 				</Button>
 			</div>
 
-			{/* Dialog box for New Account */}
-			<ParentForm isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} />
+			<ParentForm
+				isOpen={isSignedIn}
+				setIsOpen={setIsSignedIn}
+				onSubmit={() => setIsFormFilled(true)}
+			/>
+
+			<LoginDialog
+				isOpen={isDialogOpen}
+				setIsOpen={setIsDialogOpen}
+				onLoginSuccess={() => setIsSignedIn(true)}
+			/>
 		</div>
 	);
 };
