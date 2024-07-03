@@ -4,13 +4,15 @@ import Section from './Section';
 import { BackgroundCircles, BottomLine, Gradient } from './design/Hero';
 import { heroIcons } from '../constants';
 import { ScrollParallax } from 'react-just-parallax';
-import { useRef } from 'react';
+import { useRef, useState } from 'react'; // Import useState
 import Generating from './Generating';
 import Notification from './Notification';
 import CompanyLogos from './CompanyLogos';
+import { WhyDialog } from './WhyDialog'; // Import WhyDialog
 
 const Hero = () => {
 	const parallaxRef = useRef(null);
+	const [isWhyDialogOpen, setIsWhyDialogOpen] = useState(false); // State for Why Dialog
 
 	return (
 		<Section
@@ -40,8 +42,8 @@ const Hero = () => {
 						focus, track progress, and maximize educational success with our
 						AI-powered app.
 					</p>
-					<Button href='/pricing' white>
-						Get started
+					<Button onClick={() => setIsWhyDialogOpen(true)} white>
+						Why?
 					</Button>
 				</div>
 				<div className='relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24'>
@@ -98,6 +100,9 @@ const Hero = () => {
 			</div>
 
 			<BottomLine />
+
+			{/* WhyDialog */}
+			<WhyDialog isOpen={isWhyDialogOpen} setIsOpen={setIsWhyDialogOpen} />
 		</Section>
 	);
 };

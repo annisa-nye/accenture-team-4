@@ -78,9 +78,9 @@ export const notificationImages = [notification4, notification3, notification2];
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
-	'Photo generating',
-	'Photo enhance',
-	'Seamless Integration',
+	'Personalized Learning Paths',
+	'Responsive Teaching',
+	'Interactive Methods',
 ];
 
 export const brainwaveServicesIcons = [
@@ -128,21 +128,23 @@ export const roadmap = [
 ];
 
 export const collabText =
-	"With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+	'Designed to support pupils struggling with Autism, Down Syndrome, Cerebral Palsy and ADHD.';
 
 export const collabContent = [
 	{
 		id: '0',
-		title: 'Seamless Integration',
-		text: collabText,
+		title: 'Step-by-Step task management',
+		text: 'Breaks down complex tasks into manageable steps, simplifying information processing and making learning more accessible for children with intellectual disabilities.',
 	},
 	{
 		id: '1',
-		title: 'Smart Automation',
+		title: 'Customized communication support',
+		text: 'Combines visual aids and simplified language options to help children overcome barriers and improve their understanding and expression.',
 	},
 	{
 		id: '2',
-		title: 'Top-notch Security',
+		title: 'Engaging learning experience',
+		text: 'Uses interactive elements and progress tracking with rewarding milestones to boost motivation and keep children engaged in their learning journey.',
 	},
 ];
 
@@ -208,35 +210,33 @@ export const collabApps = [
 export const pricing = [
 	{
 		id: '0',
-		title: 'Basic',
-		description: 'AI chatbot, personalized recommendations',
-		price: '0',
+		title: 'Design',
+		description: 'Figma',
+		price: '2 days',
 		features: [
-			'An AI chatbot that can understand your queries',
-			'Personalized recommendations based on your preferences',
-			'Ability to explore the app and its features without any cost',
+			'Create wireframes',
+			'UI/UX designs',
+			'Prototyping',
 		],
 	},
 	{
 		id: '1',
-		title: 'Premium',
-		description: 'Advanced AI chatbot, priority support, analytics dashboard',
-		price: '9.99',
+		title: 'Development',
+		description: 'HTML, CSS, Javascript, React, Firebase, OpenAI API',
+		price: '3 days',
 		features: [
-			'An advanced AI chatbot that can understand complex queries',
-			'An analytics dashboard to track your conversations',
-			'Priority support to solve issues quickly',
+			'Implement front-end and back-end functionality',
+			'Integrate OpenAI API for chatbot functionality',
+			'Integrate Firebase for user authentication and data storage',
 		],
 	},
 	{
 		id: '2',
-		title: 'Enterprise',
-		description: 'Custom AI chatbot, advanced analytics, dedicated account',
-		price: null,
+		title: 'Deployment',
+		description: 'Amazon Web Services',
+		price: '5 days',
 		features: [
-			'An AI chatbot that can understand your queries',
-			'Personalized recommendations based on your preferences',
-			'Ability to explore the app and its features without any cost',
+			'Deploy the application to a cloud platform',
 		],
 	},
 ];
@@ -244,16 +244,16 @@ export const pricing = [
 export const benefits = [
 	{
 		id: '0',
-		title: 'Task Management',
-		text: 'Breaks down tasks into manageable steps, making learning simpler.',
+		title: 'Processing information',
+		text: 'They may find it difficult to understand and retain complex or multiple instructions, leading to slower learning and frustration.',
 		backgroundUrl: './src/assets/benefits/card-1.svg',
 		iconUrl: benefitIcon1,
 		imageUrl: benefitImage2,
 	},
 	{
 		id: '1',
-		title: 'Personalized Learning',
-		text: 'Creates custom learning paths tailored to each child\'s unique needs, using the most recent research for guidance.',
+		title: 'Communication barriers',
+		text: 'These students might have challenges in expressing themselves clearly and understanding others, which can hinder effective learning and social interaction.',
 		backgroundUrl: './src/assets/benefits/card-2.svg',
 		iconUrl: benefitIcon2,
 		imageUrl: benefitImage2,
@@ -261,35 +261,10 @@ export const benefits = [
 	},
 	{
 		id: '2',
-		title: 'Progress Tracking',
-		text: 'Allows parents and teachers to monitor educational progress easily.',
+		title: 'Lack of Motivation',
+		text: 'Due to repeated difficulties and setbacks, they may experience low self-esteem and reduced motivation to engage in learning activities.',
 		backgroundUrl: './src/assets/benefits/card-3.svg',
 		iconUrl: benefitIcon3,
-		imageUrl: benefitImage2,
-	},
-	{
-		id: '3',
-		title: 'Accessible Anywhere',
-		text: 'Connect with Brainwave from any device, ensuring learning is always convenient.',
-		backgroundUrl: './src/assets/benefits/card-4.svg',
-		iconUrl: benefitIcon4,
-		imageUrl: benefitImage2,
-		light: true,
-	},
-	{
-		id: '4',
-		title: 'Fast responding',
-		text: 'Provides quick and accurate responses to learning queries and tasks, considering each child\'s unique needs and disabilities.',
-		backgroundUrl: './src/assets/benefits/card-5.svg',
-		iconUrl: benefitIcon1,
-		imageUrl: benefitImage2,
-	},
-	{
-		id: '5',
-		title: 'Improve everyday',
-		text: 'The app uses natural language processing to understand user queries and provide accurate and relevant responses.',
-		backgroundUrl: './src/assets/benefits/card-6.svg',
-		iconUrl: benefitIcon2,
 		imageUrl: benefitImage2,
 	},
 ];
