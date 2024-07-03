@@ -133,18 +133,18 @@ export const collabText =
 export const collabContent = [
 	{
 		id: '0',
-		title: 'Step-by-Step task management',
-		text: 'Breaks down complex tasks into manageable steps, simplifying information processing and making learning more accessible for children with intellectual disabilities.',
+		title: 'Tailored Education Journey',
+		text: "Our AI-driven system creates and continuously adapts a customized learning path based on each student's unique needs, learning style, and specific disability.",
 	},
 	{
 		id: '1',
-		title: 'Customized communication support',
-		text: 'Combines visual aids and simplified language options to help children overcome barriers and improve their understanding and expression.',
+		title: 'Step-by-Step Success',
+		text: 'Complex educational tasks are broken down into clear, manageable steps with detailed guidance, visual aids, and interactive elements to make challenging concepts more approachable.',
 	},
 	{
 		id: '2',
-		title: 'Engaging learning experience',
-		text: 'Uses interactive elements and progress tracking with rewarding milestones to boost motivation and keep children engaged in their learning journey.',
+		title: 'Celebration of Progress',
+		text: 'The app incorporates interactive elements, progress tracking, and a reward system, allowing students to earn virtual awards for reaching milestones, keeping them motivated and engaged throughout their learning journey.',
 	},
 ];
 
