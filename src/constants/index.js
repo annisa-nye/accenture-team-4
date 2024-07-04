@@ -260,49 +260,40 @@ export const pricing = [
 export const pricing2 = [
 	{
 		id: '0',
-		title: '-End',
-		description: 'User-friendly interface optimized for various devices.',
-		price: 'React',
+		title: 'Day 1',
+		description: 'Google, ChatGPT, Claude.ai',
+		price: 'Discovery',
 		features: [
-			'Responsive design',
-			'Intuitive navigation',
-			'Accessibility compliance',
+			'Brainstorm ideas',
+			'Research disabilities',
+			'Identify gaps in the market',
 		],
 	},
 	{
 		id: '1',
-		title: 'Back-End',
-		description:
-			'Robust server infrastructure to handle data processing, storage, and API requests.',
-		price: 'Express.js, MongoDB',
-		features: [
-			'RESTful API',
-			'Scalable architecture',
-			'Efficient data management',
-		],
+		title: 'Day 2',
+		description: 'Figma, HTML, CSS',
+		price: 'Design',
+		features: ['UI/UX design', 'Create wireframes', 'Prototyping'],
 	},
 	{
 		id: '2',
-		title: 'AI Engine',
-		description:
-			'Machine learning algorithms for personalization and adaptation of learning content.',
-		price: 'TensorFlow, Python',
+		title: 'Day 3',
+		description: 'Javascript, React, OpenAI',
+		price: 'Develop',
 		features: [
-			'Personalized learning paths',
-			'Content recommendation',
-			'Adaptive difficulty',
+			'Implement front-end functionality',
+			'Integrate OpenAI API for functionality',
 		],
 	},
 	{
 		id: '3',
-		title: 'Security Layer',
-		description:
-			'Robust security measures ensuring data privacy and protection of sensitive user information.',
-		price: 'OAuth 2.0, SSL/TLS',
+		title: 'Day 4',
+		description: '',
+		price: 'Deploy',
 		features: [
-			'End-to-end encryption',
-			'Secure data storage',
-			'Regular security audits',
+			'Finalise presentation',
+			'Oral practice',
 		],
 	},
 ];
@@ -328,7 +319,7 @@ export const benefits = [
 	{
 		id: '2',
 		title: 'Precision Tailored Learning Paths',
-		text: "The app creates personalized learning journeys using data on age, gender, and preferences, refining the experience to optimize learning outcomes.",
+		text: 'The app creates personalized learning journeys using data on age, gender, and preferences, refining the experience to optimize learning outcomes.',
 		backgroundUrl: './src/assets/benefits/card-3.svg',
 		iconUrl: benefitIcon3,
 		imageUrl: benefitImage2,
