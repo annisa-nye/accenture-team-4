@@ -1,6 +1,5 @@
 import { brainwaveSymbol, check } from '../assets';
 import { collabApps, collabContent, collabText } from '../constants';
-import Button from './Button';
 import Section from './Section';
 import { LeftCurve, RightCurve } from './design/Collaboration';
 import TagLine from './Tagline';
@@ -29,7 +28,6 @@ const Collaboration = () => {
 						))}
 					</ul>
 
-					<Button>Try it now</Button>
 				</div>
 
 				<div className='lg:ml-auto xl:w-[38rem] mt-4'>
