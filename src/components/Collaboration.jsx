@@ -3,12 +3,14 @@ import { collabApps, collabContent, collabText } from '../constants';
 import Button from './Button';
 import Section from './Section';
 import { LeftCurve, RightCurve } from './design/Collaboration';
+import TagLine from './Tagline';
 
 const Collaboration = () => {
 	return (
 		<Section id='core-features' crosses>
 			<div className='container lg:flex'>
 				<div className='max-w-[25rem]'>
+					<TagLine className='mb-4 md:mb-8'>Brainwave</TagLine>
 					<h2 className='h2 mb-4 md:mb-8'>
 						Core Features
 					</h2>

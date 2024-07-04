@@ -480,8 +480,8 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
+    title: "Interactive Voice Tutor",
+    text: "Implement voice-activated teaching features, allowing students to interact verbally with the app for a more immersive and accessible learning experience.",
     date: "May 2023",
     status: "done",
     imageUrl: roadmap1,

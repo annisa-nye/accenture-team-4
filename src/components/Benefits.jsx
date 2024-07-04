@@ -10,6 +10,7 @@ const Benefits = () => {
 		<Section id='features'>
 			<div className='container relative z-2'>
 				<Heading
+					tag='Brainwave'
 					className='md:max-w-md lg:max-w-2xl'
 					title='Our Solution'
 				/>

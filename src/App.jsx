@@ -10,21 +10,21 @@ import Services from "./components/Services";
 
 const App = () => {
   return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Benefits />
-        <Collaboration />
-        <Pricing />
-        <Roadmap />
-        <Footer />
-        <Services />
-      </div>
+		<>
+			<div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
+				<Header />
+				<Hero />
+				<Benefits />
+				<Collaboration />
+				<Pricing />
+				<Roadmap />
+				<Services />
+				<Footer />
+			</div>
 
-      <ButtonGradient />
-    </>
-  );
+			<ButtonGradient />
+		</>
+	);
 };
 
 export default App;
