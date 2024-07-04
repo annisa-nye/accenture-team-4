@@ -268,8 +268,8 @@ export const benefits = [
 	},
 	{
 		id: '1',
-		title: 'Cutting-Edge Technology',
-		text: "By leveraging the latest AI research and big data analytics, we create dynamic learning experiences that evolve with each student's progress.",
+		title: 'Research-Driven Guidance',
+		text: "Our AI uses the latest research to present tasks effectively for each child's disability, adapting in real-time to their progress.",
 		backgroundUrl: './src/assets/benefits/card-2.svg',
 		iconUrl: benefitIcon2,
 		imageUrl: benefitImage2,
@@ -277,8 +277,8 @@ export const benefits = [
 	},
 	{
 		id: '2',
-		title: 'Personalized AI-Powered Support',
-		text: 'Our app harnesses AI to deliver personalized education for students with Autism, Down Syndrome, Cerebral Palsy, and ADHD, ensuring each child receives tailored, effective support that adapts to their unique abilities.',
+		title: 'Precision Tailored Learning Paths',
+		text: "The app creates personalized learning journeys using data on age, gender, and preferences, refining the experience to optimize learning outcomes.",
 		backgroundUrl: './src/assets/benefits/card-3.svg',
 		iconUrl: benefitIcon3,
 		imageUrl: benefitImage2,
