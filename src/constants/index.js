@@ -94,8 +94,8 @@ export const brainwaveServicesIcons = [
 export const roadmap = [
 	{
 		id: '0',
-		title: 'Interactive Voice Tutor',
-		text: 'Implement voice-activated teaching features, allowing students to interact verbally with the app for a more immersive and accessible learning experience.',
+		title: 'Mood Detector',
+		text: "We plan to integrate a mood detection feature that will assess the child's emotional state and adapt the learning activities accordingly to ensure they are always engaged and motivated.",
 		date: 'Jul 2025',
 		status: 'progress',
 		imageUrl: roadmap1,
@@ -119,7 +119,7 @@ export const roadmap = [
 	},
 	{
 		id: '3',
-		title: 'Integration with APIs',
+		title: 'Dictionary Integration',
 		text: 'Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.',
 		date: 'Jul 2025',
 		status: 'progress',
