@@ -257,6 +257,56 @@ export const pricing = [
 	},
 ];
 
+export const pricing2 = [
+	{
+		id: '0',
+		title: '-End',
+		description: 'User-friendly interface optimized for various devices.',
+		price: 'React',
+		features: [
+			'Responsive design',
+			'Intuitive navigation',
+			'Accessibility compliance',
+		],
+	},
+	{
+		id: '1',
+		title: 'Back-End',
+		description:
+			'Robust server infrastructure to handle data processing, storage, and API requests.',
+		price: 'Express.js, MongoDB',
+		features: [
+			'RESTful API',
+			'Scalable architecture',
+			'Efficient data management',
+		],
+	},
+	{
+		id: '2',
+		title: 'AI Engine',
+		description:
+			'Machine learning algorithms for personalization and adaptation of learning content.',
+		price: 'TensorFlow, Python',
+		features: [
+			'Personalized learning paths',
+			'Content recommendation',
+			'Adaptive difficulty',
+		],
+	},
+	{
+		id: '3',
+		title: 'Security Layer',
+		description:
+			'Robust security measures ensuring data privacy and protection of sensitive user information.',
+		price: 'OAuth 2.0, SSL/TLS',
+		features: [
+			'End-to-end encryption',
+			'Secure data storage',
+			'Regular security audits',
+		],
+	},
+];
+
 export const benefits = [
 	{
 		id: '0',
