@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
-import image from '../assets/image.png'; // Ensure the correct path to the image
+import image from '../assets/image1.png'; // Ensure the correct path to the image
 
 const ImageDialog = ({ isOpen, setIsOpen }) => {
 	return (
