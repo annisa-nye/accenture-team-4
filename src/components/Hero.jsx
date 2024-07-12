@@ -24,6 +24,7 @@ const Hero = () => {
 		>
 			<div className='container relative' ref={parallaxRef}>
 				<div className='relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]'>
+					<h3 className='h3 mb-2 md:mb-3 lg:mb-4'><em>Team 4 presents:</em></h3>
 					<h1 className='h1 mb-6'>
 						Unleash Your Child's&nbsp;Full Potential&nbsp; with {` `}
 						<span className='inline-block relative'>
