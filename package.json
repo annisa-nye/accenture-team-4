@@ -2,7 +2,7 @@
 	"name": "brainwave",
 	"private": true,
 	"version": "0.0.0",
-	"homepage": "https://annisa-nye.github.io/accenture-team4/",
+	"homepage": "https://annisa-nye.github.io/accenture-team-4/",
 	"type": "module",
 	"scripts": {
 		"predeploy": "npm run build",
